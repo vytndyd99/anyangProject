@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>안양정책모음</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <!-- sbb CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/anyangPolicyStyle.css}">
+</head>
+<body>
+<!-- 네비게이션바 -->
+<nav th:replace="~{navbar :: navbarFragment}"></nav>
+<!-- Bootstrap JS -->
+<script th:src="@{/bootstrap.min.js}"></script>
+
+<div class="gallery">
+    <ul>
+        <li>
+            <a href="https://blog.naver.com/tvanyanggokr/223204937139">
+                <figure>
+                    <img th:src="@{/anyangPolicyImg/경기도_청년_기본소득.jpeg}" alt="이미지01" class="img-fluid">
+                   <figcaption>
+                       <div>
+                           신청기간 : 23.09.01 ~ 23.10.02
+                       </div>
+                       <div>
+                           지급대상 : 만 24세 경기도 거주 청년
+                       </div>
+                       <div>
+                           지급조건 : 최근 3년이상, 혹은 합산 10년 이상 경기도 거주자
+                       </div>
+                       <div>
+                           지원금액 : 분기별 25만원 지급, 최대 100만원 지역화폐
+                       </div>
+                   </figcaption>
+                </figure>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://blog.naver.com/tvanyanggokr/223195694909">
+                <figure>
+                    <img th:src="@{/anyangPolicyImg/경기도_청년_면접수당.png}" alt="이미지01" class="img-fluid">
+                    <figcaption>
+                        <div>
+                            신청기간 : 23.08.16 ~ 23.09.25
+                        </div>
+                        <div>
+                            지급대상 : 경기도에 거주하는 18세 ~ 39세 이하 구직청년
+                        </div>
+                        <div>
+                            지급조건 : 아르바이트 및 직장 면접 확인서 지참
+                        </div>
+                        <div>
+                            지원금액 : 최대 50만원 (1회 5만원)
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://blog.naver.com/tvanyanggokr/223198673738">
+                <figure>
+                    <img th:src="@{/anyangPolicyImg/경기도_청소년_교통비지원.jpeg}" alt="이미지01" class="img-fluid">
+                    <figcaption>
+                        <div>
+                            신청기간 : 23.09.01 ~ 23.10.15
+                        </div>
+                        <div>
+                            지급대상 : 경기도에 거주하는 만13세 ~ 23세 청소년
+                        </div>
+                        <div>
+                            지급조건 : 경기버스 이용한 본인명의 교통카드 보유, 지역화폐, 인증서
+                        </div>
+                        <div>
+                            지원금액 : 상반기 6만원 한도
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://blog.naver.com/tvanyanggokr/223199771158">
+                <figure>
+                    <img th:src="@{/anyangPolicyImg/안양_온오프라인.jpeg}" alt="이미지01" class="img-fluid">
+                    <figcaption>
+                        <div>
+                            신청기간 : 23.08.29 ~ 23.09.11
+                        </div>
+                        <div>
+                            참여대상 : 구직 준비중 청년, 관내 대학생 및 특성화고 학생 (안양거주 우선)
+                        </div>
+                        <div>
+                            접수처 : 안양시 일자리센터홈페이지 > 프로그램 > 청년직무컨설팅
+                        </div>
+                        <div>
+                            문의 : 고용노동과 일자리지원팀 (031-8045-2397)
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://blog.naver.com/tvanyanggokr/223191010618">
+                <figure>
+                    <img th:src="@{/anyangPolicyImg/안양_청년공간지원.png}" alt="이미지01" class="img-fluid">
+                    <figcaption>
+                        <div>
+                            위치 : 범계역 광장
+                        </div>
+                        <div>
+                            용도 : 자유롭게 사용 가능! (예약필수)
+                        </div>
+                        <div>
+                            예약문의 : 031-476-9371
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://blog.naver.com/tvanyanggokr/223206065544">
+                <figure>
+                    <img th:src="@{/anyangPolicyImg/안양사랑페이_할인율정리.png}" alt="이미지01" class="img-fluid">
+                    <figcaption>
+                        <div>
+                            10% 할인 : 23.05.01 ~ 23.09.30
+                        </div>
+                        <div>
+                            7% 할인 : 23.10.01 ~ 23.12.31
+                        </div>
+                        <div>
+                            구매한도 : 월 50만원 (카드30, 종이20)
+                        </div>
+                        <div>
+                            사용처 : 안양사랑페이 가맹점
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>

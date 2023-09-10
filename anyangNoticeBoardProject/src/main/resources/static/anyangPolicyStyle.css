@@ -1,0 +1,55 @@
+
+
+*{ padding: 0; margin: 0; }
+li{ list-style: none; }
+
+
+.gallery{
+    width: 100%; margin: 0 auto;
+    /*border: 3px solid black;*/
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.gallery li{
+    float: left;
+    width: 400px; height: 400px;
+    margin-right: 20px;
+    margin-top: 2rem;
+}
+.gallery li:last-child{ margin-right: 0; }
+
+.gallery a{
+    display: block; /* 영역적용위해 사용 */
+    width: 100%; height: 100%;
+
+    overflow: hidden;
+
+    position: relative; /* absolute의 기본기준은 body로 처리 - 현재 요소로 기준변경 */
+}
+
+.gallery figure{
+    width: 100%; height: 100%;
+}
+.gallery figcaption{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+
+    position: absolute; /* 이미지와 겹치게 처리 */
+    top: 50%; /* 세로 중앙 정렬을 위한 설정 */
+    left: 50%; /* 가로 중앙 정렬을 위한 설정 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 실제로 수행하는 부분 */
+
+    color: #fff; text-align: center;
+    line-height: 1.5;
+    white-space: pre-line;
+
+    opacity: 0; /* 처음엔 안보이고 */
+
+    transition: 0.3s;
+}
+
+.gallery a:hover figcaption, .gallery a:focus figcaption{
+    /* 마우스를 올리면 보이게 처리 */
+    opacity: 1;
+}
