@@ -12,35 +12,34 @@
 <!-- 네비게이션바 -->
 <nav th:replace="~{navbar :: navbarFragment}"></nav>
 <!-- 피드백 게시판-->
-<div class="container my-3">
-    <div class="my-3 border-bottom">
-        <div>
-            <h4>회원가입</h4>
-        </div>
-    </div>
-    <form th:action="@{/user/signUp}" th:object="${userCreateForm}" method="post">
-        <div th:replace="~{form_errors :: formErrorsFragment}"></div>
-        <div class="mb-3">
-            <label for="username" class="form-label">사용자ID</label>
-            <input type="text" th:field="*{username}" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">비밀번호</label>
-            <input type="password" th:field="*{password}" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="passwordCheck" class="form-label">비밀번호 확인</label>
-            <input type="password" th:field="*{passwordCheck}" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">이메일</label>
-            <input type="email" th:field="*{email}" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary">회원가입</button>
-    </form>
-</div>
+<h1>메일 보내기</h1>
+
+<form th:action="@{/develop/feedback}" method="post">
+    <table>
+        <tr>
+            <td>메일 주소</td>
+            <td>
+                <input type="text" name="address" placeholder="이메일 주소를 입력하세요">
+            </td>
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td>
+                <input type="text" name="title" placeholder="제목을 입력하세요">
+            </td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td>
+                <textarea name="content" placeholder="보낼 내용을 입력하세요"> </textarea>
+            </td>
+        </tr>
+    </table>
+    <button>발송</button>
+</form>
 
 <!-- Bootstrap JS -->
 <script th:src="@{/bootstrap.min.js}"></script>
+<script th:src="@{/feedbackJS.js}"></script>
 </body>
 </html>
