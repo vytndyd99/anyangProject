@@ -12,31 +12,26 @@
 <!-- 네비게이션바 -->
 <nav th:replace="~{navbar :: navbarFragment}"></nav>
 <!-- 피드백 게시판-->
-<h1>메일 보내기</h1>
+<div layout:fragment="content" class="container my-3">
+    <div class="my-3 border-bottom">
+        <div>
+            <h4>개발자에게 한마디</h4>
+        </div>
+    </div>
+    <form th:action="@{/develop/feedback}" th:object="${feedback}" method="post">
+        <div th:replace="~{form_errors :: formErrorsFragment}"></div>
+        <div class="mb-3">
+            <label for="title" class="form-label">제목</label>
+            <input type="text" th:field="*{title}" class="form-control" placeholder="메일 제목을 입력해보세요!">
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">내용</label>
+            <textarea name="content" th:field="*{content}" id="content" class="form-control" rows="10" placeholder="피드백은 개발자에게 힘이 됩니다"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">피드백 보내기!</button>
+    </form>
+</div>
 
-<form th:action="@{/develop/feedback}" method="post">
-    <table>
-        <tr>
-            <td>메일 주소</td>
-            <td>
-                <input type="text" name="address" placeholder="이메일 주소를 입력하세요">
-            </td>
-        </tr>
-        <tr>
-            <td>제목</td>
-            <td>
-                <input type="text" name="title" placeholder="제목을 입력하세요">
-            </td>
-        </tr>
-        <tr>
-            <td>내용</td>
-            <td>
-                <textarea name="content" placeholder="보낼 내용을 입력하세요"> </textarea>
-            </td>
-        </tr>
-    </table>
-    <button>발송</button>
-</form>
 
 <!-- Bootstrap JS -->
 <script th:src="@{/bootstrap.min.js}"></script>

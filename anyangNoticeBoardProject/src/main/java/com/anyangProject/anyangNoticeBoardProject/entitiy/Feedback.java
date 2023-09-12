@@ -1,6 +1,4 @@
-package com.anyangProject.anyangNoticeBoardProject.dto;
-
-import java.util.*;
+package com.anyangProject.anyangNoticeBoardProject.entitiy;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class FeedbackDTO {
-    private String address;
+public class Feedback {
     private String title;
     private String content;
 }

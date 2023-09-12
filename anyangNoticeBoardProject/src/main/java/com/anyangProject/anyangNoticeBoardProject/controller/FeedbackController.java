@@ -1,14 +1,14 @@
 package com.anyangProject.anyangNoticeBoardProject.controller;
 
-import com.anyangProject.anyangNoticeBoardProject.dto.FeedbackDTO;
+import com.anyangProject.anyangNoticeBoardProject.entitiy.Feedback;
 import com.anyangProject.anyangNoticeBoardProject.service.FeedbackService;
 import jakarta.mail.MessagingException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
@@ -24,14 +24,16 @@ public class FeedbackController {
         this.feedbackService = feedbackService;
     }
     @GetMapping("/feedback")
-    public String feedbackPage() {
+    public String feedbackPage(Model model,
+                               Feedback feedback) {
+        model.addAttribute("feedback", feedback);
         return "feedbackPage";
     }
 
     @PostMapping("/feedback")
-    public String feedbackMail(FeedbackDTO feedbackDTO)
+    public String feedbackMail(Feedback feedback)
         throws MessagingException, IOException {
-        feedbackService.sendSimpleMessage(feedbackDTO);
+        feedbackService.sendSimpleMessage(feedback);
         return "feedbackPage";
     }
 }
