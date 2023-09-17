@@ -15,7 +15,7 @@ public class FeedbackService {
 
     @Autowired
     private JavaMailSender emailSender;
-    private final static String toEmail = "vytndyd99@dankook.ac.kr";
+    private final static String toEmail = "vytndyd99@gmail.com";
 
     public void sendSimpleMessage(Feedback feedbackDTO) {
         SimpleMailMessage message = new SimpleMailMessage();

@@ -20,3 +20,7 @@ const opt_remove = (obj) => {
 const opt_remove2 = (obj) => {
     obj.parentElement.parentElement.parentElement.removeChild(obj.parentElement.parentElement);
 }
+
+const alertMessage = () => {
+    alert("메일이 보내졌습니다!");
+}
